@@ -18,7 +18,7 @@ using Pkg
 Pkg.activate(joinpath(@__DIR__, ".."))
 
 using LinearAlgebra
-using TrustRegionVis
+using. TrustRegionVis
 
 # ------------------------------------------------------------------------------
 # 1. Definição do problema: função de Rosenbrock

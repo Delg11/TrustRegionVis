@@ -1,18 +1,18 @@
 # TrustRegionVis
 
-Framework leve para visualizar, quadro a quadro, o comportamento de métodos de otimização por Região de Confiança (*Trust Region*) em problemas 2D[cite: 4].
+Framework leve para visualizar, quadro a quadro, o comportamento de métodos de otimização por Região de Confiança (*Trust Region*) em problemas 2D.
 
 ## Funcionalidades
 
-* O pacote gera uma sequência de imagens PNG com zoom dinâmico da câmera, recalculado a partir do raio da região de confiança e do tamanho do passo tentado[cite: 4, 5].
-* Os níveis de contorno são gerados com interpolação logarítmica para preencher espaços vazios, garantindo que vales e paredes íngremes permaneçam visíveis no mapa[cite: 2, 4].
-* A renderização apresenta indicadores visuais do vetor gradiente atual, do gradiente da iteração aceita anterior, da região de confiança delimitada e da decisão de aceitação ou rejeição do passo[cite: 4, 5].
-* O framework é agnóstico em relação ao otimizador, exigindo estritamente que as iterações sejam registradas e fornecidas em um vetor do tipo `PassoRC`[cite: 3, 4].
-* Os quadros gerados pela função `visualizar_frames_dinamicos` podem ser compilados em um arquivo GIF através da função `gerar_gif`, a qual exige a disponibilidade do executável `ffmpeg` no sistema[cite: 5].
+* O pacote gera uma sequência de imagens PNG com zoom dinâmico da câmera, recalculado a partir do raio da região de confiança e do tamanho do passo tentado.
+* Os níveis de contorno são gerados com interpolação logarítmica para preencher espaços vazios, garantindo que vales e paredes íngremes permaneçam visíveis no mapa.
+* A renderização apresenta indicadores visuais do vetor gradiente atual, do gradiente da iteração aceita anterior, da região de confiança delimitada e da decisão de aceitação ou rejeição do passo.
+* O framework é agnóstico em relação ao otimizador, exigindo estritamente que as iterações sejam registradas e fornecidas em um vetor do tipo `PassoRC`.
+* Os quadros gerados pela função `visualizar_frames_dinamicos` podem ser compilados em um arquivo GIF através da função `gerar_gif`, a qual exige a disponibilidade do executável `ffmpeg` no sistema.
 
 ## Uso Básico
 
-A estrutura do pacote é fundamentada nos tipos `Problema`, que armazena a função objetivo e seu gradiente, e `PassoRC`, que encapsula as métricas e decisões de uma única iteração do otimizador[cite: 3].
+A estrutura do pacote é fundamentada nos tipos `Problema`, que armazena a função objetivo e seu gradiente, e `PassoRC`, que encapsula as métricas e decisões de uma única iteração do otimizador.
 
 ```julia
 using TrustRegionVis

@@ -1,0 +1,6 @@
+cff-version: 1.2.0
+message: "Se você utilizar este software, por favor cite-o utilizando os metadados abaixo."
+authors:
+  - name: "Delg11"
+title: "TrustRegionVis"
+license: "MIT"
